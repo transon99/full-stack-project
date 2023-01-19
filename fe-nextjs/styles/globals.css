@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .container {
+    @apply xl:max-w-[1220px] md:max-w-[720px] lg:max-w-[920px]  mx-auto;
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -33,4 +39,9 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+:root {
+  --primary-color: #ff6464;
+  --secondary-color: #000;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
 
-export function Admin() {
+export function AdminLayout() {
   return <div>Admin</div>;
 }
