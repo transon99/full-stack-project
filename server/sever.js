@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import connectDB from './src/config/connet-database';
+import rootRoutes from './src/routes';
 require('dotenv').config();
 
 const app = express();
@@ -17,6 +18,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // kết nối với DB
 connectDB()
+
+// dùng router
+app.use('/api/v1', rootRoutes);
 
 const PORT = process.env.PORT || 8080;
 
